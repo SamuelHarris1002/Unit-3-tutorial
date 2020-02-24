@@ -6,8 +6,8 @@ function test(){
     var list = input.split(" ");
     let filteredList = [];
     let instructions = [];
-    let start = []
-    let end = []
+    let start = [];
+    let end = [];
     let ans = 0;
 
     var lightGrid = new Array(1000).fill(0).map(()=>new Array(1000).fill(0));
@@ -39,28 +39,28 @@ function test(){
     //end is the bottom left corner in a 2d array
     //light grid is a 1000 x 1000 array of off light blubs
 
-    for(var i =0; i < instructions.length; i++){
+    for(var i = 0; i < instructions.length; i++){
         if(instructions[i] === "on"){
-            var xS = start[i][0]
-            
+            var xS = start[i][0];
+            var yS = start[i][1];
 
-            var xE = end[i][0]
-            var yE = end[i][1]
+            var xE = end[i][0];
+            var yE = end[i][1];
 
             var tempS = 0;
             var tempL = 0;
 
-            tempS = Math.min(xS, xE)
-            tempL = Math.max(xS, xE)
+            tempS = Math.min(xS, xE);
+            tempL = Math.max(xS, xE);
 
-            xS = tempS
-            xE = tempL
+            xS = tempS;
+            xE = tempL;
 
-            temps = Math.min(yS, yE)
-            tempL = Math.max(yS, yE)
+            tempS = Math.min(yS, yE);
+            tempL = Math.max(yS, yE);
 
-            yS = tempS
-            yE = tempL
+            yS = tempS;
+            yE = tempL;
 
             for(var x = xS; x <= xE ; x++){
                 for(var y = yS; y <= yE ; y++){
@@ -69,26 +69,26 @@ function test(){
             }
         }
         else if(instructions[i] === "off"){
-            var xS = start[i][0]
-            var yS = start[i][1]
+            var xS = start[i][0];
+            var yS = start[i][1];
 
-            var xE = end[i][0]
-            var yE = end[i][1]
+            var xE = end[i][0];
+            var yE = end[i][1];
 
             var tempS = 0;
             var tempL = 0;
 
             tempS = Math.min(xS, xE);
-            tempL = Math.max(xS, xE)
+            tempL = Math.max(xS, xE);
 
-            xS = tempS
-            xE = tempL
+            xS = tempS;
+            xE = tempL;
 
-            temps = Math.min(yS, yE)
-            tempL = Math.max (yS, yE)
+            temps = Math.min(yS, yE);
+            tempL = Math.max(yS, yE);
 
-            yS = tempS
-            yE = tempL
+            yS = tempS;
+            yE = tempL;
 
             for(var x = xS; x <= xE ; x++){
                 for(var y = yS; y <= yE ; y++){
@@ -100,26 +100,26 @@ function test(){
             }
         }
         else if(instructions[i] === "toggle"){
-            var xS = start[i][0]
-            var yS = start[i][1]
+            var xS = start[i][0];
+            var yS = start[i][1];
 
-            var xE = end[i][0]
-            var yE = end[i][1]
+            var xE = end[i][0];
+            var yE = end[i][1];
 
             var tempS = 0;
             var tempL = 0;
 
-            tempS = Math.min(xS, xE)
-            tempL = Math.max(xS, xE)
+            tempS = Math.min(xS, xE);
+            tempL = Math.max(xS, xE);
 
-            xS = tempS
-            xe = tempL
+            xS = tempS;
+            xe = tempL;
 
             tempS = Math.min(yS, yE);
-            tempL = Mathmax(yS, yE)
+            tempL = Math.max(yS, yE);
 
-            yS = tempS
-            yE = tempL
+            yS = tempS;
+            yE = tempL;
 
             for(var x = xS; x <= xE ; x++){
                 for(var y = yS; y <= yE ; y++){
